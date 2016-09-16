@@ -1,74 +1,9 @@
 var MovieController = function MovieController($scope) {
-
-    var self = this;
-    self.likesList=[];
-
-     self.unlike = function unlike (index) {
-         self.likesList.splice(index, 1);
-    }
-    self.addToLikes = function addToLikes (movie) {
-         self.likesList.push(movie);
-    }
-    self.favorites = [{
-        title: 'The Shawshank Redemption',
-        year: '1994',
-        popular: true
-    }, {
-        title: 'Inception',
-        year: '2010',
-        popular: false
-    }, {
-        title: 'The Matrix',
-        year: '1999',
-        popular: true
-    }, {
-        title: 'Saving Private Ryan',
-        year: '1998',
-        popular: true
-    }, {
-        title: 'The Aviator',
-        year: '2004',
-        popular: false
-    }];
-    //console.log(self.favorites);
+    $scope.person = {
+        name : 'Abdulla Chowdhury',
+        location: 'Long Island City, queense'
+    };
 };
-// $scope.favorites = [{
-// 	title: 'The Shawshank Redemption',
-// 	year: '1994'
-// }, {
-// 	title: 'Inception',
-//       year: '2010'
-// }, {
-// 	itle: 'The Matrix',
-//       year: '1999'
-//   }, {
-//   	title: 'Saving Private Ryan',
-//       year: '1998'
-//   }, {
-//   	title: 'The Aviator',
-//       year: '2004'
-//   }];
-
-//   console.log($scope.favorites);
-// self.favorites = [{
-//       title: 'The Shawshank Redemption',
-//       year: '1994'
-//   },{
-//       title: 'Inception',
-//       year: '2010'
-//   }, {
-//       title: 'The Matrix',
-//       year: '1999'
-//   }, {
-//       title: 'Saving Private Ryan',
-//       year: '1998'
-//   }, {
-//       title: 'The Aviator',
-//       year: '2004'
-//   }];
-//console.log(self.favorites);
-// };
-
 angular
     .module('app')
-    .controller('MovieController', MovieController);
+    .controller('MovieController',['$scope', MovieController]);

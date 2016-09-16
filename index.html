@@ -16,26 +16,12 @@
 </head>
 
 <body>
-    <div ng-controller="MovieController as movies">
-        <div class="likes">
-            <p>
-                Abdulla's like list
-            </p>
-            <ul>
-                <li ng-repeat="like in movies.likesList track by $index">
-                    <p>{{like.title}}</p>
-                    <a href="" ng-click="movies.unlike($index);"> unlike! </a>
-                </li>
-            </ul>
-        </div>
-        <ul>
-            <li ng-repeat="movie in movies.favorites track by $index">
-                <p>
-                    {{movie.title}}
-                </p>
-                <a href="" ng-click="movies.addToLikes(movie);">Like!</a>
-            </li>
-        </ul>
+    <div ng-controller="MovieController">
+        <input type="text"
+            ng-model="person.location" 
+        />
+        <!-- <p>{{person | json}}</p>; -->
+        <pre>{{person | json}}</pre>
     </div>
     <script src="./js/app.js"></script>
     <script src="./js/MainController.js"></script>
